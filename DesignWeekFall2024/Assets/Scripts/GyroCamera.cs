@@ -7,9 +7,12 @@ public class GyroCamera : MonoBehaviour
     private float appliedGyroYAngle = 0f;
     private float calibrationYAngle = 0f;
 
+    
+
     void Start()
     {
         Application.targetFrameRate = 60;
+        Input.gyro.enabled = true;
         initialYAngle = transform.eulerAngles.y;
     }
 
