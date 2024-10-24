@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public Transform transform;
 
     public float movementSpeed = 5f;
-    public Vector3 playerStartPos;
+    //public Vector3 playerStartPos;
 
     private void Start()
     {
-        playerStartPos = new Vector3(16.1f, 2.35f, -16.24f);
+        //playerStartPos = new Vector3(16.1f, 2.35f, -16.24f);
     }
 
 
@@ -21,14 +21,16 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MoveRight();
-
-        if (transform.position.x == transform.position.x + 1 * Time.deltaTime)
-        {
-            MoveLeft();
-        }
-
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject)
+        {
+            movementSpeed = 0f;
+            Destroy(collision.gameObject);
+        }
+    }
 
     //Static Movements
     public void MoveRight()
