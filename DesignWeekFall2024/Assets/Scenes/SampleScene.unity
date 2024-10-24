@@ -706,6 +706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureWip
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: 75b7674f9d18dc54ea7643e6bd8b3ea0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e368fa50656fb9540a2ce78d4ce693f3, type: 2}
     - target: {fileID: 4167280743394806330, guid: 75b7674f9d18dc54ea7643e6bd8b3ea0, type: 3}
       propertyPath: m_LocalScale.x
       value: -130.90164
