@@ -6,7 +6,7 @@ public class Flashlight : MonoBehaviour
 {
     public Light flashLight;
 
-    //bool flashOn = false;
+    bool flashOn = false;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        /*if (Input.GetKeyDown(KeyCode.L))
         {
             flashLight.enabled = true;
             Debug.Log("Working");
@@ -27,8 +27,15 @@ public class Flashlight : MonoBehaviour
         {
             flashLight.enabled = false;
         }
+        */
 
 
+    }
 
+
+    public void FlashOnOff()
+    {
+        flashOn = !flashOn;
+        flashLight.enabled = flashOn;
     }
 }
