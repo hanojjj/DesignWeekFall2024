@@ -14,14 +14,6 @@ public class Flashlight : MonoBehaviour
         flashLight.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-    }
-
-
     public void FlashlightOnOff()
     {
 

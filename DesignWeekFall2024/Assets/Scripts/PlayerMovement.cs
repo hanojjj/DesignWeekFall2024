@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.x < 60.5f)
         {
             MoveRight();
-            //transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
