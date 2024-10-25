@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform transform;
 
-    public float movementSpeed = 5f;
+    public float movementSpeed = 0.5f;
     //public Vector3 playerStartPos;
 
     private void Start()
@@ -21,15 +21,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MoveRight();
-    }
-
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject)
-        {
-            movementSpeed = 0f;
-            Destroy(collision.gameObject);
-        }
     }
 
     //Static Movements
