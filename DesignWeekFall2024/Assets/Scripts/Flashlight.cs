@@ -5,29 +5,21 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     public Light flashLight;
+    public GameObject monster;
 
     bool flashOn = false;
 
     private void Start()
     {
         flashLight = GetComponent<Light>();
+        monster = GetComponent<GameObject>();
         flashLight.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.L))
-        {
-            flashLight.enabled = true;
-            Debug.Log("Working");
-
-        }
-        else if (Input.GetKeyDown(KeyCode.K))
-        {
-            flashLight.enabled = false;
-        }
-        */
+     
 
 
     }
