@@ -17,10 +17,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float movementSpeed = 0.5f;
     public Vector3 playerStartPos;
+    public Vector3 playerStartRot;
 
     private void Start()
     {
         playerStartPos = new Vector3(22.8260002f, 1.53900003f, -8.89000034f);
+        playerStartRot = new Vector3(0, 0, 0);
         wall.SetActive(false);
     }
 
@@ -29,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-        
     }
 
     //Static Movements
@@ -38,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.x < 60.5f)
         {
             MoveRight();
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            //transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
@@ -60,10 +61,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.name == "Wall")
         {
+            Debug.Log("Hit wall");
+            Input.gyro.enabled = false;
+            transform.eulerAngles = playerStartRot;
             movementSpeed = 0f;
             source2.PlayOneShot(jumpScare);
             StartCoroutine(DeathDelay());
-
+            
         }
     }
 
@@ -84,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator DeathDelay()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         SceneManager.LoadScene("EndScreen");
 
     }

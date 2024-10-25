@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.4528302, g: 0.19010323, b: 0.19010323, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.09
+  m_FogDensity: 0.04
   m_LinearFogStart: 0
   m_LinearFogEnd: 66.01
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
@@ -3264,6 +3264,7 @@ MonoBehaviour:
   jumpScare: {fileID: 8300000, guid: ee8fdb8a936a34c82a054e7d0eacc6bc, type: 3}
   movementSpeed: 2.5
   playerStartPos: {x: 0, y: 0, z: 0}
+  playerStartRot: {x: 0, y: 0, z: 0}
 --- !u!54 &1870213789
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class Control : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Warning");
     }
 
     public void QuitGame()
