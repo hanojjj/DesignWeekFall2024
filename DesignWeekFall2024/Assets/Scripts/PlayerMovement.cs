@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
@@ -83,9 +84,10 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator DeathDelay()
     {
-        yield return new WaitForSeconds(3);
-        Debug.Log("hi");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("EndScreen");
+
     }
-    
+
 
 }

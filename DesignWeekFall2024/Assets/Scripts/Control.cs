@@ -7,4 +7,10 @@ public class Control : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Closed");
+    }
 }
