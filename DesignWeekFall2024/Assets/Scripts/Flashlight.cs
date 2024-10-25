@@ -6,6 +6,9 @@ public class Flashlight : MonoBehaviour
 {
     public Light flashLight;
 
+    public AudioSource source;
+    public AudioClip light;
+
     bool flashOn = false;
 
     private void Start()
@@ -19,5 +22,6 @@ public class Flashlight : MonoBehaviour
 
         flashOn = !flashOn;
         flashLight.enabled = !flashLight.enabled;
+        source.PlayOneShot(light);
     }
 }

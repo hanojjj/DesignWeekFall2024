@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.iOS;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -7,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Transform transform;
+
+    public AudioSource source;
+    public AudioClip monsterScream;
 
     public float movementSpeed = 0.5f;
     public Vector3 playerStartPos;
@@ -36,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             MoveBackwards();
-            //transform.eulerAngles = new Vector3(0, 90, 0);
+            transform.eulerAngles = new Vector3(0, 90, 0);
         }
     }
 
@@ -44,9 +48,8 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         transform.position = playerStartPos;
+        source.PlayOneShot(monsterScream);
     }
-
-
 
 
 
