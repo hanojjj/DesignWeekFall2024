@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.iOS;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject wall;
 
     public Transform transform;
 
     public AudioSource source;
     public AudioClip monsterScream;
+    public AudioSource source2;
+    public AudioClip jumpScare;
 
     public float movementSpeed = 0.5f;
     public Vector3 playerStartPos;
@@ -18,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         playerStartPos = new Vector3(22.8260002f, 1.53900003f, -8.89000034f);
-        
+        wall.SetActive(false);
     }
 
 
@@ -40,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             MoveBackwards();
-            transform.eulerAngles = new Vector3(0, 90, 0);
+            //transform.eulerAngles = new Vector3(0, 90, 0);
         }
     }
 
@@ -49,6 +51,19 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = playerStartPos;
         source.PlayOneShot(monsterScream);
+        wall.SetActive(true);
+
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Wall")
+        {
+            movementSpeed = 0f;
+            source2.PlayOneShot(jumpScare);
+            StartCoroutine(DeathDelay());
+
+        }
     }
 
 
@@ -65,6 +80,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
+    public IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(3);
+        Debug.Log("hi");
+    }
     
 
 }
