@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047058824, g: 0.03529412, b: 0.04353832, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.49803925, g: 0.5137255, b: 0.54509807, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.213
   m_FlareStrength: 0.248
   m_FlareFadeSpeed: 1
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 2
   m_ReflectionIntensity: 0.732
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3745181, g: 0.41573545, b: 0.4868033, a: 0.732}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -553,9 +553,9 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 40
+  m_Color: {r: 0.7877769, g: 0.8018868, b: 0.63923997, a: 1}
+  m_Intensity: 8
+  m_Range: 20
   m_SpotAngle: 52
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -657,11 +657,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &705507994 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 9044885817584562073, guid: 7b563bec59187894ba5c2b04c6ac6452, type: 3}
-  m_PrefabInstance: {fileID: 4676274313546013274}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,9 +1016,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 371658299633339737, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1455963464077634992, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
       propertyPath: m_Name
       value: hallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495302447961215698, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0159717
+      objectReference: {fileID: 0}
+    - target: {fileID: 1495302447961215698, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720438577504399557, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489882499571633134, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3370602383374850509, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5397428104815908529, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456741165485486923, guid: 047fff7749bb3224da1ada570ae620b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,7 +1196,7 @@ Transform:
   m_GameObject: {fileID: 1870213783}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.826, y: 1.539, z: -8.89}
+  m_LocalPosition: {x: 22.895, y: 1.539, z: -8.89}
   m_LocalScale: {x: 1, y: 1.5025436, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1233,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 5004677450927432719, guid: 7b563bec59187894ba5c2b04c6ac6452, type: 3}
       propertyPath: m_Name
       value: 'cealing light '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004677450927432719, guid: 7b563bec59187894ba5c2b04c6ac6452, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5067807156232308248, guid: 7b563bec59187894ba5c2b04c6ac6452, type: 3}
       propertyPath: m_LocalPosition.x
