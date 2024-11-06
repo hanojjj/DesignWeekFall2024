@@ -24,4 +24,8 @@ public class Flashlight : MonoBehaviour
         flashLight.enabled = !flashLight.enabled;
         source.PlayOneShot(light);
     }
+
+
+
+    ///alsjdhfisakdgf;asidoubg'aosdubfsadfsadf
 }
